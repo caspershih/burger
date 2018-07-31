@@ -1,7 +1,7 @@
 // dependencies
 var express = require("express");
-var express = require("body-parser");
-var express = require("mysql");
+var bodyParser = require("body-parser");
+var mysql = require("mysql");
 
 var app = express();
 
@@ -29,7 +29,7 @@ var connection = mysql.createConnection( {
 
 connection.connect(function(err) {
     if (err) {
-        console.err("error connecting to: " + err.stack);
+        console.log("error connecting to: " + err.stack);
     return;
     }
 
